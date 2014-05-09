@@ -12,8 +12,8 @@
 		<header class="page-header">
 			<h1>
 				{{todo.user}}'s TO DO List...
-				<span class="label label-default">
-					{{todo.items.length}}
+				<span class="label label-default" ng-hide="incompleteCount() === 0">
+					{{incompleteCount()}}
 				</span>
 			</h1>
 		</header>
@@ -31,7 +31,6 @@
 					<tr>
 						<th>Description</th>
 						<th>Done</th>
-						<th>Boolean</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -40,7 +39,6 @@
 						<td>{{item.action}}</td>
 						<!-- input sending a boolean... -->
 						<td><input type="checkbox" ng-model="item.done"/></td>
-						<td>{{item.done}}</td>
 					</tr>
 				</tbody>
 			</table>
