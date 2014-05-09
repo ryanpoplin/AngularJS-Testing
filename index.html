@@ -8,9 +8,14 @@
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="js/core.js"></script>
 	</head>
-	<body>
+	<body ng-controller="ToDoCtrl">
 		<header class="page-header">
-			<h1>TO DO List...</h1>
+			<h1>
+				{{todo.user}}'s TO DO List...
+				<span class="label label-default">
+					{{todo.items.length}}
+				</span>
+			</h1>
 		</header>
 		<div class="panel">
 			<div class="input-group">
@@ -26,10 +31,17 @@
 					<tr>
 						<th>Description</th>
 						<th>Done</th>
+						<th>Boolean</th>
 					</tr>
 				</thead>
 				<tbody>
-					
+					<!-- a sweet AngularJS directive... -->
+					<tr ng-repeat="item in todo.items">
+						<td>{{item.action}}</td>
+						<!-- input sending a boolean... -->
+						<td><input type="checkbox" ng-model="item.done"/></td>
+						<td>{{item.done}}</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>

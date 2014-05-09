@@ -1,12 +1,27 @@
-var model = {
+// BATARANG!
+
+// data model...
+var todoModel = {
 	user: "Ryan",
+	// 'items' collection...
 	items: [{ 
-		actions: "Buy an awesome book on AngularJS...", 
+		action: "Buy an awesome book on AngularJS...", 
 		done: true 
 	}, {
-		actions: "Find Her...",
+		action: "Find Her...",
+		done: false
+	}, {
+		action: "The Iron Yard's Digital Health Accelerator Acceptance...",
 		done: false
 	}]
 };
 
+// 'todoApp' module...
 var todoApp = angular.module("todoApp", []);
+
+todoApp.controller("ToDoCtrl", function($scope) {
+
+	// will work as: {{todo.user}}...
+	$scope.todo = todoModel;
+
+});
