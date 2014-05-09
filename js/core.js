@@ -31,6 +31,7 @@ todoApp.controller("ToDoCtrl", function($scope) {
 	$scope.todo = todoModel;
 
 	$scope.incompleteCount = function() {
+		// Awesome entry to logic lesson...
 		var count = 0;
 		angular.forEach($scope.todo.items, function(item) {
 			if (!item.done) {
@@ -38,6 +39,10 @@ todoApp.controller("ToDoCtrl", function($scope) {
 			}
 		});
 		return count;
+	};
+
+	$scope.warningLevel = function() {
+		return $scope.incompleteCount() < 3 ? "label-success" : "label-warning";
 	};
 
 });
