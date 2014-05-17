@@ -3,23 +3,6 @@
 // data model...
 var todoModel = {
 	user: "ExcepApps",
-	// 'items' collection...
-	/*items: [{ 
-		action: "Buy an awesome book on AngularJS...", 
-		done: true 
-	}, {
-		action: "Find Her...",
-		done: false
-	}, {
-		action: "The Iron Yard's Digital Health Accelerator Acceptance...",
-		done: false
-	}, {
-		action: "Master AngularJS...",
-		done: false
-	}, {
-		action: "Master NodeJS...",
-		done: false
-	}]*/
 };
 
 // 'todoApp' module...
