@@ -1,0 +1,166 @@
+header {
+	/*div	{
+		border: 1px solid #131313;
+		font-size: 2em;
+		padding: 25px;
+	}
+	a {
+		color: #10b5b8;
+		text-decoration: none;
+		span {
+			color: purple;
+		}
+	}*/
+}
+// A REALLY GOOD STARTING POINT ON SASS N' CSS...
+.grid-settings {
+	margin-left: 1%;
+}
+/* Example: Simple 2-column layout */
+.page {
+  text-align: justify;
+  text-justify: distribute-all-lines;
+}
+header, nav, footer {
+  text-align: left;
+}
+nav, .main, footer {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+nav {
+  width: 17em / 75.5em * 100%; /* Sass */
+}
+.main {
+  width: 56em / 75.5em * 100%; /* Sass */
+}
+/* Example: Justify aligning last row */
+.main {
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  font-size: 0;
+}
+.opera .main {
+  font-size: 0.5px; /* Opera fix, bugged if set to 0 */
+}
+.main:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+h1, .image {
+  text-align: left;
+  font-size: medium;
+}
+.image {
+  margin-top: 0.2em;
+  vertical-align: top;
+  display: inline-block;
+  width: 69em / 140em * 100%; /* Sass */
+  height: 0;
+  padding-bottom: 6.91965%;
+  background: #ccc;
+  text-align: justify;
+}
+/* Presentational styles */
+html, body {
+  padding: 0;
+  margin: 0;
+  color: #333;
+  font: 300 100%/1.5 'Open Sans', sans-serif;
+}
+html {
+  min-height: 100%;
+  // background-color: #8495a5;
+  /*background-image:
+    -webkit-linear-gradient(top, rgba(181,191,201,0.5), rgba(79,89,99,0.5)),
+    -webkit-radial-gradient(center top, rgba(132,149,165,0.6), #8495a5 80%),
+    -webkit-linear-gradient(top, #ffffff 1px, transparent 1px),
+    -webkit-linear-gradient(left, #ffffff 1px, transparent 1px);
+  background-image:
+    -moz-linear-gradient(top, rgba(181,191,201,0.5), rgba(79,89,99,0.5)),
+    -moz-radial-gradient(center top, rgba(132,149,165,0.6), #8495a5 80%),
+    -moz-linear-gradient(top, #ffffff 1px, transparent 1px),
+    -moz-linear-gradient(left, #ffffff 1px, transparent 1px);
+  background-image:
+    -o-linear-gradient(top, rgba(181,191,201,0.5), rgba(79,89,99,0.5)),
+    -o-radial-gradient(center top, rgba(132,149,165,0.6), #8495a5 80%),
+    -o-linear-gradient(top, #ffffff 1px, transparent 1px),
+    -o-linear-gradient(left, #ffffff 1px, transparent 1px);
+  background-image:
+    linear-gradient(to bottom, rgba(181,191,201,0.5), rgba(79,89,99,0.5)),
+    radial-gradient(at center top, rgba(132,149,165,0.6), #8495a5 80%),
+    linear-gradient(to bottom, #ffffff 1px, transparent 1px),
+    linear-gradient(to right, #ffffff 1px, transparent 1px);*/
+  background-size: auto, auto, 1em 1em, 1em 1em;
+  background-position: 50% -1px;
+}
+body {
+  margin: 0 1em;
+}
+h1 {
+  margin: 0;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+  line-height: 1.5;
+}
+a {
+  color: #fff;
+}
+.page {
+  max-width: 75.5rem;
+  margin: 0 auto;
+}
+header > h1 {
+  color: #fff;
+  font-size: 48px;
+  font-size: 3rem;
+  text-shadow: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.4);
+}
+header a {
+  text-decoration: none;
+}
+nav, .main {
+  background: rgba(255, 255, 255, 0.2);
+}
+nav {
+  height: 3em;
+  padding-bottom: 10.2649%;
+}
+nav > p {
+  margin: 0.5em;
+}
+@media screen and (max-width: 50em) {
+  nav > p {
+    font-size: 0.75em;
+  }
+}
+@media screen and (max-width: 35em) {
+  nav > p {
+    display: none;
+  }
+}
+.main > h1 {
+  margin: 0 0.25em;
+  font-size: 32px;
+  font-size: 2rem;
+}
+@media screen and (max-width: 25em) {
+  nav {
+    height: 2.25em;
+  }
+  .main > h1 {
+    font-size: 1.5rem;
+  }
+  footer {
+    font-size: 0.75em;
+  }
+}
+.image img {
+  display: block;
+  max-width: 100%;
+}
+footer {
+  color: #fff;
+}
